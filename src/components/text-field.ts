@@ -5,7 +5,7 @@ import './word-counter.ts';
 
 @customElement('text-field')
 class TextField extends LitElement {
-  @property({type : String})
+  @property({ type: String })
   value = '';
 
   handleInputTextUpdate = (newValue: string): void => {
@@ -42,7 +42,7 @@ class TextField extends LitElement {
   render() {
     return html`
       <div class="text-field-container">
-        <textarea class="text-field" @keyup=${e => this.handleInputTextUpdate(e.target.value)}>${this.value}</textarea>
+        <textarea class="text-field" @keyup=${(e) => this.handleInputTextUpdate(e.target.value)}>${this.value}</textarea>
         <word-counter value=${this.value} />
       </div>
     `;

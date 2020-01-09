@@ -4,8 +4,7 @@ import {
 
 @customElement('word-counter')
 class WordCounter extends LitElement {
-
-  @property({type : String})
+  @property({ type: String })
   value = '';
 
   wordcount = 0;
